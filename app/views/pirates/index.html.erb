@@ -1,0 +1,23 @@
+<h1>Listing pirates</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @pirates.each do |pirate| %>
+  <tr>
+    <td><%= pirate.name %></td>
+    <td><%= link_to 'Show', pirate %></td>
+    <td><%= link_to 'Edit', edit_pirate_path(pirate) %></td>
+    <td><%= link_to 'Destroy', pirate, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Pirate', new_pirate_path %>

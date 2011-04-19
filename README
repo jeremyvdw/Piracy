@@ -1,0 +1,10 @@
+# Demo app to demonstrate activerecord's bug with nested_attributes and params sorting
+
+# Stack: Rails3 + Rspec + FactoryGirl
+
+
+# How to reproduce the bug:
+
+rake db:migrate
+rake db:test:clone
+rake spec
